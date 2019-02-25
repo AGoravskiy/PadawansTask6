@@ -7,6 +7,11 @@ namespace PadawansTask6
     {
         public static int? NextBiggerThan(int number)
         {
+            if (number < 0)
+            {
+                throw new ArgumentException();
+            }
+
             List<int> masWithAllInt = NumberToMas(number);
             List<int> theBestList = new List<int>();
             MasWithAllInt(masWithAllInt, theBestList);
